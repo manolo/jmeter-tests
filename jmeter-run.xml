@@ -34,7 +34,7 @@
        style="${jmeter}/extras/jmeter-results-detail-report_21.xsl"/>
   </target>
 
-  <target name="all" depends="test"/>
+  <target name="all" depends="test, report"/>
 
 </project>
 
