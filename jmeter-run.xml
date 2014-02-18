@@ -2,7 +2,7 @@
 
   <path id="ant.jmeter.classpath">
     <pathelement
-       location="${jmeter}/extras/ant-jmeter-1.0.9.jar" />
+       location="${jmeter}/extras/ant-jmeter-1.1.1.jar" />
   </path>
 
   <taskdef
@@ -22,6 +22,7 @@
        jmeterhome="${jmeter}"
        resultlogdir="results/jtl">
       <testplans dir="src/test/jmeter" includes="*.jmx"/>
+      <property name="jmeter.save.saveservice.output_format" value="xml"/>
     </jmeter>
   </target>
 
@@ -33,7 +34,7 @@
        style="${jmeter}/extras/jmeter-results-detail-report_21.xsl"/>
   </target>
 
-  <target name="all" depends="test, report"/>
+  <target name="all" depends="test"/>
 
 </project>
 
